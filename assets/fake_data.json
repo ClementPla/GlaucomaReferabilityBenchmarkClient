@@ -1,0 +1,22 @@
+{
+  "listImages": [
+    {
+      "id": 1,
+      "status": "not_graded",
+      "referable": -1,
+      "confidence": -1
+    },
+    {
+      "id": 2,
+      "status": "graded",
+      "referable": -1,
+      "confidence": -1
+    },
+    {
+      "id": 3,
+      "status": "not_graded",
+      "referable": -1,
+      "confidence": -1
+    }
+  ]
+}
