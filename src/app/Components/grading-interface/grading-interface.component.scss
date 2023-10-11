@@ -1,0 +1,48 @@
+.image-container {
+  width: fit-content;
+  margin: auto;
+}
+
+.left-sidenav {
+  padding: 0.5em;
+  width: 10em;
+}
+
+.right-sidenav {
+  padding: 2em;
+  width: fit-content;
+  gap: 2em;
+  justify-content: center; /* center items vertically, in this case */
+}
+.column-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.referability-buttons {
+  margin: auto;
+  width: 75%;
+}
+.graded {
+  background-color: lightgreen !important ;
+}
+
+.not_graded {
+  background-color: lightcoral !important;
+}
+
+.activeImage {
+  border: solid gray 1px;
+}
+
+.confidence-panel {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+}
+
+.main{
+  border: solid gray 1px;
+  height: 100%;
+}

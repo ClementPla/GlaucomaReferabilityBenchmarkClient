@@ -1,0 +1,51 @@
+<mat-toolbar>
+  <button type="button" mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- left-sidenav -->
+<mat-sidenav-container class="container" autosize>
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <div class="column-panel left-sidenav">
+      <button mat-raised-button color="primary" *ngFor="let imageGradable of listImages"
+        [ngClass]=getImageSelectorStyle(imageGradable) (click)="changeActiveImage(imageGradable)">
+        Image {{imageGradable.id}}
+      </button>
+    </div>
+  </mat-sidenav>
+
+  <!-- sidenav-content -->
+    <div class="sidenav-content">
+      <div class="image-container">
+        <app-zoomable-canvas imgPath="assets/placeholder_fundus.png"></app-zoomable-canvas>
+      </div>
+    </div>
+
+  <!-- right-sidenav -->
+  <mat-sidenav mode="side" opened="true" position="end">
+    <div class="column-panel right-sidenav">
+      <h2> Glaucoma</h2>
+      <mat-button-toggle-group aria-label="Font Style">
+        <mat-button-toggle value="bold">Non referable</mat-button-toggle>
+        <mat-button-toggle value="italic">Referable</mat-button-toggle>
+      </mat-button-toggle-group>
+      <mat-divider></mat-divider>
+      <div class="confidence-panel">
+      <h2> Optional</h2>
+        <mat-label>Confidence</mat-label>
+        <mat-slider min="0" max="100" step="1" value="confidenceScore" discrete>
+          <input matSliderThumb>
+        </mat-slider>
+      </div>
+
+    <mat-form-field>
+        <mat-label>Comments</mat-label>
+        <textarea matInput></textarea>
+
+    </mat-form-field>
+    </div>
+
+  </mat-sidenav>
+
+</mat-sidenav-container>

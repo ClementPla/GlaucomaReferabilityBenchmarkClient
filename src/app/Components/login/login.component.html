@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="login-container">
+    <h2>
+      Connection
+    </h2>
+    <mat-form-field class="fixed-size-input">
+      <mat-label>Enter your username</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="fixed-size-input">
+      <mat-label >Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button mat-button class="fixed-size-input">Connect</button>
+
+  </div>
+
+</div>
